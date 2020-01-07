@@ -1,0 +1,19 @@
+[tool.black]
+py36 = true
+# 老旧项目如果影响较大可设置为 true
+skip-string-normalization = false
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''

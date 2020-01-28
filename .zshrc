@@ -66,10 +66,8 @@ ZSH_THEME="Soliah"
 plugins=(
   git
 autojump
-#vscode
 zsh-autosuggestions
 zsh-completions
-#kubectl
 )
 # mysql
 export PATH=${PATH}:/usr/local/mysql/bin
@@ -87,37 +85,13 @@ source $ZSH/oh-my-zsh.sh
 
 # auto completions
 fpath=(/usr/local/share/zsh-completions $fpath)
-
-# go config
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
-
-# copy the last command use ctrl+]
-source ~/.iterm2_shell_integration.zsh
-
-# python config
-export PATH=$PATH:/usr/local/bin/python3
-# system python2
-export PATH=$PATH:/usr/bin/python
-
 export PATH=$PATH:/opt/local/bin
-# export MANPATH="/usr/local/man:$MANPATH"
-
+#
+#
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8 
 export LANG=en_US.UTF-8
-
-# mac vim 
-# Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
-# set vim for macvim 
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 
 # Compilation flags
@@ -135,14 +109,10 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias rm='echo "please use del"'
-alias del='rmtrash'
+alias rm='echo "please use rmtrash "'
 
 # conda
-. /Users/fjl2401/miniconda3/etc/profile.d/conda.sh
+. ~/miniconda3/etc/profile.d/conda.sh
 export PATH="/usr/local/sbin:$PATH"
 source /usr/local/bin/virtualenvwrapper.sh
 export PATH="/usr/local/opt/curl/bin:$PATH"
-
-# ctags
-export ctags="/usr/local/bin/ctags:$PATH"

@@ -51,25 +51,15 @@ Plug 'wolfgangmehner/c-support'
 Plug '907th/vim-auto-save'
 Plug 'Valloric/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
+Plug 'rhysd/vim-clang-format'
 "Plug 'nathanaelkane/vim-indent-guides'
 " 便签导航
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/ctags.vim'
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-
-"vim runtime
-set runtimepath+=~/.vim_runtime
-
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
-
-try
-    source ~/.vim_runtime/my_configs.vim
-catch
-endtry
 
 colorscheme  gruvbox
 
@@ -85,6 +75,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 let g:NERDTreeWinPos = "left"
 let NERDTreeWinSize=31
+let NERDTreeShowHidden=1
 
 
 " autosave plugin
